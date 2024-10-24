@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+      <!-- Recorre la lista de empleados y crea una tarjeta para cada uno -->
+      <div class="col-md-4" *ngFor="let emp of employees">
+        <div class="card mb-4" style="width: 18rem;">
+          <!-- Puedes usar una imagen predeterminada si no tienes imágenes para los empleados -->
+          <img src="assets/img/default_employee.png" class="card-img-top" alt="Empleado Imagen">
+          <div class="card-body">
+            <h5 class="card-title">{{ emp.first_name }} {{ emp.last_name }}</h5>
+            <p class="card-text">
+              <strong>Email:</strong> {{ emp.email }} <br>
+              <strong>Teléfono:</strong> {{ emp.phone_number }} <br>
+              <strong>Salario:</strong> {{ emp.salary | currency }} <br>
+              <strong>Fecha de Contratación:</strong> {{ emp.hire_date }} <br>
+            </p>
+            <a href="#" class="btn btn-primary">Modificar</a>
+            <a href="#" class="btn btn-outline-success">Eliminar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
