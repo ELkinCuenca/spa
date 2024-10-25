@@ -165,4 +165,20 @@ export class EmployeesService {
   getEmployeeById(employee_id: number) {
     return this.employees.find(emp => emp.employee_id === employee_id);
   }
+  
 }
+
+export interface Employees {
+  employee_id: number;
+  first_name: string;
+  last_name: string;
+  email: string;
+  phone_number?: string; // ? significa que este campo es opcional
+  hire_date: string; // o Date, según cómo manejes las fechas
+  job_id: string;
+  salary: number;
+  commission_pct?: number;
+  manager_id?: number; // opcional
+  department_id: number;
+}
+
